@@ -291,7 +291,7 @@ func TestWriteDelta_SmallMaxLiteralSize(t *testing.T) {
 			}
 
 			// Generate file
-			blockNumber, blockSize, lastBlockSize, originalFile, err := generateFile(1, 100)
+			blockNumber, blockSize, lastBlockSize, originalFile, err := generateFile(2, 100)
 			assert.Nil(t, err)
 
 			maxLiteralSize := lastBlockSize/2 + 1

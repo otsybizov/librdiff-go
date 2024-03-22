@@ -43,7 +43,7 @@ func TestPatch_PrependFile(t *testing.T) {
 			}
 
 			// Generate file
-			_, blockSize, _, originalFile, err := generateFile(1, 100)
+			_, blockSize, _, originalFile, err := generateFile(2, 100)
 			assert.Nil(t, err)
 
 			// Insert random bytes at the beginning of the file
@@ -76,7 +76,7 @@ func TestPatch_AppendFile(t *testing.T) {
 			}
 
 			// Generate file
-			_, blockSize, _, originalFile, err := generateFile(1, 100)
+			_, blockSize, _, originalFile, err := generateFile(2, 100)
 			assert.Nil(t, err)
 
 			// Append random bytes at the end of the file
@@ -109,7 +109,7 @@ func TestPatch_InsertBetweenBlocks(t *testing.T) {
 			}
 
 			// Generate file
-			blockNumber, blockSize, _, originalFile, err := generateFile(1, 100)
+			blockNumber, blockSize, _, originalFile, err := generateFile(2, 100)
 			assert.Nil(t, err)
 
 			// Insert random bytes at the beginning of a block
@@ -144,7 +144,7 @@ func TestPatch_ModifyBlock(t *testing.T) {
 			}
 
 			// Generate file
-			blockNumber, blockSize, _, originalFile, err := generateFile(1, 100)
+			blockNumber, blockSize, _, originalFile, err := generateFile(2, 100)
 			assert.Nil(t, err)
 
 			// Modify one of the blocks
@@ -179,7 +179,7 @@ func TestPatch_RemoveBlock(t *testing.T) {
 			}
 
 			// Generate file
-			blockNumber, blockSize, _, originalFile, err := generateFile(1, 100)
+			blockNumber, blockSize, _, originalFile, err := generateFile(2, 100)
 			assert.Nil(t, err)
 
 			// Remove one of the blocks
@@ -213,7 +213,7 @@ func TestPatch_SmallMaxLiteralSize(t *testing.T) {
 			}
 
 			// Generate file
-			_, blockSize, lastBlockSize, originalFile, err := generateFile(1, 100)
+			_, blockSize, lastBlockSize, originalFile, err := generateFile(2, 100)
 			assert.Nil(t, err)
 
 			maxLiteralSize := lastBlockSize/2 + 1
